@@ -7,22 +7,30 @@ const { defineConfig } = require('vite');
  * https://vitejs.dev/config
  */
 const config = defineConfig({
-    root: Path.join(__dirname, '..', 'src', 'renderer'),
-    publicDir: 'public',
-    server: {
-        port: 3000,
+  root: Path.join(__dirname, '..', 'src', 'renderer'),
+  publicDir: 'public',
+  server: {
+    port: 3000,
+  },
+  open: false,
+  build: {
+    outDir: Path.join(__dirname, '..', 'build', 'renderer'),
+    emptyOutDir: true,
+  },
+  plugins: [vuePlugin()],
+  css: {
+    preprocessorOptions: {
+      less: {
+        modifyVars: {},
+        javascriptEnabled: true,
+      },
     },
-    open: false,
-    build: {
-        outDir: Path.join(__dirname, '..', 'build', 'renderer'),
-        emptyOutDir: true,
+  },
+  resolve: {
+    alias: {
+      '@': Path.join(__dirname, '..', 'src', 'renderer'),
     },
-    plugins: [vuePlugin()],
-    resolve: {
-        alias: {
-            '@': Path.join(__dirname, '..', 'src', 'renderer')
-        }
-    }
+  },
 });
 
 module.exports = config;
