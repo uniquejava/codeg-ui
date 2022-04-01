@@ -20,26 +20,26 @@ Clone this repository: `git clone git@github.com:Deluze/electron-vue-template.gi
 ### Install dependencies ⏬
 
 ```bash
-npm install
+yarn
 ```
 
 ### Start developing ⚒️
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 ## Additional Commands
 
 ```bash
-npm run dev # starts application with hot reload
-npm run build # builds application
+yarn dev # starts application with hot reload
+yarn build # builds application
 
 # OR
 
-npm run build:win # uses windows as build target
-npm run build:mac # uses mac as build target
-npm run build:linux # uses linux as build target
+yarn build:win # uses windows as build target
+yarn build:mac # uses mac as build target
+yarn build:linux # uses linux as build target
 ```
 
 Optional configuration options can be found in the [Electron Builder CLI docs](https://www.electron.build/cli.html).
